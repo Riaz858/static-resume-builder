@@ -1,0 +1,271 @@
+:root {
+    --sidebar-bg: #1e293b;
+    --main-bg: #ffffff;
+    --accent-color: #03a9f4;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --section-padding: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #f5f5f5;
+}
+
+.resume-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    
+    display: flex;
+    background-color: var(--main-bg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 30%;
+    background-color: var(--sidebar-bg);
+    color: var(--text-light);
+    padding: var(--section-padding);
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/* //////////////////////////////////////////////// */
+/* Add these new styles */
+.desktop-profile-section,
+.mobile-profile-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.desktop-profile-section h1,
+.mobile-profile-section h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.desktop-profile-section h2,
+.mobile-profile-section h2 {
+    font-size: 16px;
+    color: var(--accent-color);
+    font-weight: 400;
+}
+
+
+/* //////////////////////////////////////////////////// */
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    object-fit: fill;
+
+
+
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.sidebar h2 {
+    font-size: 16px;
+    color: var(--accent-color);
+    font-weight: 400;
+}
+
+.sidebar h3 {
+    background-color: var(--accent-color);
+    padding: 8px;
+    margin: 20px 0 15px;
+    font-size: 16px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item i {
+    width: 20px;
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.skills-section ul,
+.hobbies-section ul {
+    list-style: none;
+}
+
+.skills-section li,
+.hobbies-section li {
+    margin-bottom: 8px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.proficiency {
+    color: var(--accent-color);
+}
+
+/* Main Content Styles */
+.main-content {
+    width: 70%;
+    padding: var(--section-padding);
+    padding: 0px 80px 0px 80px;
+    margin-top:80px;
+}
+
+.summary-section {
+    margin-bottom: 30px;
+}
+
+.main-content h3 {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    padding: 8px;
+    margin: 20px 0 15px;
+    font-size: 16px;
+}
+
+.experience-item,
+.education-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h4,
+.education-item h4 {
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.company-details,
+.education-details {
+    display: flex;
+    justify-content: space-between;
+    color: var(--accent-color);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    color: #666;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        margin: 0;
+    }
+    .desktop-profile-section,
+    .mobile-profile-section {
+        display: none;
+        
+    }
+    
+    .mobile-profile-section {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .main-content {
+        margin-top: 0;
+        padding: 15px !important;
+    }
+
+    .sidebar,
+    .main-content {
+        width: 100%;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .sidebar h1 {
+        font-size: 20px;
+    }
+
+    .sidebar h2 {
+        font-size: 14px;
+    }
+
+    .company-details,
+    .education-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .company-details span,
+    .education-details span {
+        margin-bottom: 5px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .mobile-profile-section{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        /* visibility: hidden; */
+    }
+
+    .sidebar,
+    .main-content {
+        padding: 15px;
+    }
+
+    .sidebar h1 {
+        font-size: 18px;
+    }
+
+    .contact-item {
+        font-size: 14px;
+    }
+
+    .experience-item h4,
+    .education-item h4 {
+        font-size: 16px;
+    }
+}
+
+@media print {
+    .resume-container {
+        margin: 0;
+        box-shadow: none;
+    }
+
+    body {
+        background-color: var(--main-bg);
+    }
+}
